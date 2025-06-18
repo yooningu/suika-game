@@ -48,20 +48,20 @@ const Game = {
 		previewBall: null,
 	},
 	cache: { highscore: 0 },
-	sounds: {
-		click: new Audio('./assets/click.mp3'),
-		pop0: new Audio('./assets/pop0.mp3'),
-		pop1: new Audio('./assets/pop1.mp3'),
-		pop2: new Audio('./assets/pop2.mp3'),
-		pop3: new Audio('./assets/pop3.mp3'),
-		pop4: new Audio('./assets/pop4.mp3'),
-		pop5: new Audio('./assets/pop5.mp3'),
-		pop6: new Audio('./assets/pop6.mp3'),
-		pop7: new Audio('./assets/pop7.mp3'),
-		pop8: new Audio('./assets/pop8.mp3'),
-		pop9: new Audio('./assets/pop9.mp3'),
-		pop10: new Audio('./assets/pop10.mp3'),
-	},
+	// sounds: {
+	// 	click: new Audio('./assets/click.mp3'),
+	// 	pop0: new Audio('./assets/pop0.mp3'),
+	// 	pop1: new Audio('./assets/pop1.mp3'),
+	// 	pop2: new Audio('./assets/pop2.mp3'),
+	// 	pop3: new Audio('./assets/pop3.mp3'),
+	// 	pop4: new Audio('./assets/pop4.mp3'),
+	// 	pop5: new Audio('./assets/pop5.mp3'),
+	// 	pop6: new Audio('./assets/pop6.mp3'),
+	// 	pop7: new Audio('./assets/pop7.mp3'),
+	// 	pop8: new Audio('./assets/pop8.mp3'),
+	// 	pop9: new Audio('./assets/pop9.mp3'),
+	// 	pop10: new Audio('./assets/pop10.mp3'),
+	// },
 
 	stateIndex: GameStates.MENU,
 
@@ -144,7 +144,7 @@ const Game = {
 	},
 
 	startGame: function () {
-		Game.sounds.click.play();
+		// Game.sounds.click.play();
 
 		Composite.remove(engine.world, menuStatics);
 		Composite.add(engine.world, gameStatics);
@@ -212,7 +212,7 @@ const Game = {
 				bodyA.popped = true;
 				bodyB.popped = true;
 
-				Game.sounds[`pop${bodyA.sizeIndex}`].play();
+				// Game.sounds[`pop${bodyA.sizeIndex}`].play();
 				Composite.remove(engine.world, [bodyA, bodyB]);
 				Composite.add(engine.world, Game.generateFruitBody(midPosX, midPosY, newSize));
 				Game.addPop(midPosX, midPosY, bodyA.circleRadius);
@@ -279,7 +279,7 @@ addFruit: function (x) {
 
 	if (Game.stateIndex !== GameStates.READY) return;
 
-	Game.sounds.click.play();
+	// Game.sounds.click.play();
 
 	Game.stateIndex = GameStates.DROP;
 	const latestFruit = Game.generateFruitBody(clampedX, previewBallHeight, Game.currentFruitSize);
