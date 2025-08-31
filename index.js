@@ -353,7 +353,7 @@ const menuStatics = [
 
 const wallProps = {
 	isStatic: true,
-	render: { fillStyle: '#FFEEDB' },
+	render: { fillStyle: '#fbcaff' },
 	...friction,
 };
 //-------------------------------------------------------------------------------벽벽
