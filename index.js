@@ -316,7 +316,7 @@ const render = Render.create({
 		width: Game.width,
 		height: Game.height,
 		wireframes: false,
-		background: '#450e4bab'
+		background: '#1d0e4bab'
 	}
 });
 
