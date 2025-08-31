@@ -1751,7 +1751,7 @@ var Axes = __webpack_require__(11);
         });
 
         // render properties
-        var defaultFillStyle = (body.isStatic ? '#14151f' : Common.choose(['#f19648', '#f5d259', '#f55a3c', '#063e7b', '#ececd1'])),
+        var defaultFillStyle = (body.isStatic ? '#14151f' : Common.choose(['#f19648', '#f5d259', '#71008dff', '#063e7b', '#ececd1'])),
             defaultStrokeStyle = body.isStatic ? '#555' : '#ccc',
             defaultLineWidth = body.isStatic && body.render.fillStyle === null ? 1 : 0;
         body.render.fillStyle = body.render.fillStyle || defaultFillStyle;
